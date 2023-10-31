@@ -255,7 +255,7 @@ while True:
     import gc
     gc.collect()
     torch.cuda.empty_cache()
-    
+
     # determine and set the learning rate for this iteration
     lr = get_lr(iter_num) if decay_lr else learning_rate
     for param_group in optimizer.param_groups:
